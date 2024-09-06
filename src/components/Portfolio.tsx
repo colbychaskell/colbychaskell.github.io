@@ -1,57 +1,60 @@
-import { motion, useAnimation } from "framer-motion";
-import React, { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import React from "react";
 
-import { portfolio } from "../data";
-import { SectionWrapper } from "../hoc";
-import { styles } from "../styles";
-import { fadeIn, textVariant } from "../utils/motion";
+import { textVariant } from "../utils/motion";
 import NTT from '../assets/NTTBackground.png';
 import TrainIcon from '../assets/TrainIcon.png';
 import CesiumAstro from '../assets/Cesium.png';
 
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  image,
-}) => {
-  const controls = useAnimation();
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-  });
+// interface ProjectCardProps {
+//   index: number
+//   name: string
+//   description: string
+//   image: JSX.Element
+// }
 
-  useEffect(() => {
-    if (inView) {
-      controls.start("show");
-    }
-  }, [controls, inView]);
-
-  const isEven = index % 2 === 0;
-
-  return (
-    <motion.div
-      ref={ref}
-      animate={controls}
-      initial="hidden"
-      variants={fadeIn("up", "spring", 0, 0.75)}
-      className={`w-full mt-[-2px] flex flex-col md:flex-row ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-5`}
-    >
-      <div className='relative w-full md:w-3/5'>
-        <img
-          src={image}
-          alt='project_image'
-          className='w-full h-auto object-cover md:rounded-3xl'
-        />
-      </div>
-
-      <div className={`w-full md:w-2/5 px-6 md:p-16 flex flex-col justify-center ${isEven ? "text-left md:text-left" : "text-left md:text-right"}`}>
-        <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl leading-tight'>{name}</h3>
-        <p className='mt-4 text-secondary text-sm sm:text-xs md:text-sm lg:text-md xl:text-lg 2xl:text-xl'>{description}</p>
-      </div>
-    </motion.div>
-  );
-};
+// const ProjectCard = ({
+//   index,
+//   name,
+//   description,
+//   image,
+// }: ProjectCardProps) => {
+//   const controls = useAnimation();
+//   const { ref, inView } = useInView({
+//     threshold: 0.1,
+//   });
+//
+//   useEffect(() => {
+//     if (inView) {
+//       controls.start("show");
+//     }
+//   }, [controls, inView]);
+//
+//   const isEven = index % 2 === 0;
+//
+//   return (
+//     <motion.div
+//       ref={ref}
+//       animate={controls}
+//       initial="hidden"
+//       variants={fadeIn(Direction.Up, "spring", 0, 0.75)}
+//       className={`w-full mt-[-2px] flex flex-col md:flex-row ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-5`}
+//     >
+//       <div className='relative w-full md:w-3/5'>
+//         <img
+//           src={image}
+//           alt='project_image'
+//           className='w-full h-auto object-cover md:rounded-3xl'
+//         />
+//       </div>
+//
+//       <div className={`w-full md:w-2/5 px-6 md:p-16 flex flex-col justify-center ${isEven ? "text-left md:text-left" : "text-left md:text-right"}`}>
+//         <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl leading-tight'>{name}</h3>
+//         <p className='mt-4 text-secondary text-sm sm:text-xs md:text-sm lg:text-md xl:text-lg 2xl:text-xl'>{description}</p>
+//       </div>
+//     </motion.div>
+//   );
+// };
 
 const PortfolioCard = (props: { link: string, desc: string, team: string, children: React.ReactNode, }) => {
   return (
@@ -69,7 +72,7 @@ const PortfolioCard = (props: { link: string, desc: string, team: string, childr
   );
 }
 
-const NewTrainTrackerCard = (props) => {
+const NewTrainTrackerCard = () => {
   return (
     <PortfolioCard desc="NEW TRAIN TRACKER" team="TRANSIT MATTERS" link="#">
       <div className="grid overflow-clip">
@@ -83,7 +86,7 @@ const NewTrainTrackerCard = (props) => {
   );
 }
 
-const CesiumAstroCard = (props) => {
+const CesiumAstroCard = () => {
   return (
     <PortfolioCard desc="SOFTWARE ENGINEER INTERN" team="CESIUM ASTRO" link="#">
       <img src={CesiumAstro} className="hover:cursor-pointer" />
@@ -94,7 +97,7 @@ const CesiumAstroCard = (props) => {
 const Portfolio = () => {
   return (
     <section className='col-start-1 col-end-13'>
-      <motion.div className='md:text-left' variants={textVariant()}>
+      <motion.div className='md:text-left' variants={textVariant(0)}>
         <p className='opacity-40 my-4'>PORTFOLIO.md</p>
       </motion.div>
       <div className='grid gap-3 grid-cols-3 grid-gap'>

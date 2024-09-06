@@ -1,11 +1,16 @@
 import { motion } from 'framer-motion';
-import Link from './Link';
 
-const NavbarLink = (props: { text: string, to: string }) => {
+interface NavbarLinkProps {
+  text: string,
+  to: string,
+  className?: string
+}
+
+const NavbarLink = (props: NavbarLinkProps) => {
   return (
     <p className="mx-2">
       <a href={props.to}
-        className={`${props.className} hover:bg-[#ffbd5e] hover:bg-opacity-10 hover:underline 
+        className={`${props.className} hover:bg-[#ffbd5e] hover:bg-opacity-10 hover:underline
         hover:text-[#ffbd5e] hover:cursor-pointer transition-transform duration-300`}>
         {props.text}
       </a>

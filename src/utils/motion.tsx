@@ -1,4 +1,11 @@
-export const textVariant = (delay) => {
+export enum Direction {
+  Up = 1,
+  Down,
+  Left,
+  Right,
+}
+
+export const textVariant = (delay: number) => {
   return {
     hidden: {
       y: -50,
@@ -16,11 +23,11 @@ export const textVariant = (delay) => {
   };
 };
 
-export const fadeIn = (direction, type, delay, duration) => {
+export const fadeIn = (direction: Direction, type: string, delay: number, duration: number) => {
   return {
     hidden: {
-      x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+      x: direction === Direction.Left ? 100 : direction === Direction.Right ? -100 : 0,
+      y: direction === Direction.Up ? 100 : direction === Direction.Down ? -100 : 0,
       opacity: 0,
     },
     show: {
@@ -37,7 +44,7 @@ export const fadeIn = (direction, type, delay, duration) => {
   };
 };
 
-export const zoomIn = (delay, duration) => {
+export const zoomIn = (delay: number, duration: number) => {
   return {
     hidden: {
       scale: 0,
@@ -56,11 +63,11 @@ export const zoomIn = (delay, duration) => {
   };
 };
 
-export const slideIn = (direction, type, delay, duration) => {
+export const slideIn = (direction: Direction, type: any, delay: number, duration: number) => {
   return {
     hidden: {
-      x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
-      y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0,
+      x: direction === Direction.Left ? "-100%" : direction === Direction.Right ? "100%" : 0,
+      y: direction === Direction.Up ? "100%" : direction === Direction.Down ? "100%" : 0,
     },
     show: {
       x: 0,
@@ -75,7 +82,7 @@ export const slideIn = (direction, type, delay, duration) => {
   };
 };
 
-export const staggerContainer = (staggerChildren, delayChildren) => {
+export const staggerContainer = (staggerChildren: any, delayChildren: any) => {
   return {
     hidden: {},
     show: {

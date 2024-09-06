@@ -1,8 +1,11 @@
+body {
+  background-color: #121212;
+}
+
 main {
   margin: 0 auto;
   text-align: center;
   line-height: 130%;
-  background-color: #121212;
 }
 
 .logo {
