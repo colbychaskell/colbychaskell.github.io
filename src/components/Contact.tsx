@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div id="contact" className="section w-full">
       <p className="opacity-40 mb-3">CONTACT.md</p>
-      <p className="max-w-prose">If you are interested in any of my work, I
+      <p className="max-w-prose text-sm">If you are interested in any of my work, I
         actively contribute to open-source projects on <Link
           className='text-sm' text='GitHub' to='#' />, where I also
         host most of my personal projects.
