@@ -5,7 +5,6 @@ import { textVariant } from "../utils/motion";
 import NTT from '../assets/NTTBackground.png';
 import TrainIcon from '../assets/TrainIcon.png';
 import CesiumAstro from '../assets/Cesium.png';
-import Stars from '../assets/Stars.webp';
 import Draper from '../assets/Draper.png';
 import IPhone from "./mockup/iPhone";
 import BetterBrewsScreen from "../assets/BetterBrewsScreen.png"

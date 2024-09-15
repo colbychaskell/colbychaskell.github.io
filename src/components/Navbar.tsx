@@ -34,8 +34,8 @@ const Navbar = (props: { isVisible: Boolean }) => {
         <a href="#" className="px-1 hover:text-[#ffbd5e] hover:bg-[#ffbd5e] hover:bg-opacity-10">Colby Haskell</a>
         <div className="sm:flex flex-row hidden">
           <NavbarLink text="portfolio" to="#portfolio" />
-          <NavbarLink text="blog" to="#blog" />
-          <NavbarLink text="contact" to="#contact" />
+          {/* <NavbarLink text="blog" to="#blog" /> */}
+          {/* <NavbarLink text="contact" to="#contact" /> */}
         </div>
       </div>
     </motion.nav>
