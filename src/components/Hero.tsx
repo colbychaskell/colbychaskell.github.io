@@ -4,15 +4,15 @@ import Link from "./Link";
 const Readme = () => {
   return (<div className="flex flex-col col-start-1 col-end-7">
     <p className="opacity-40 mb-3">README.md</p>
-    <p className="text-sm max-w-prose">
+    <p className="max-w-prose">
       Hello 👋
       <br /><br />
       My name is Colby Haskell. I am a Software Engineer with experience in DevOps, Embedded Software, and Web Development.
-      I studied <Link className='text-sm' text="Computer Engineering and Computer Science B.S." to="https://viterbischool.usc.edu" /> at the <Link className='text-sm' text="University of Southern California" to="https://www.usc.edu" />.
+      I studied <Link text="Computer Engineering and Computer Science B.S." to="https://viterbischool.usc.edu" /> at the <Link text="University of Southern California" to="https://www.usc.edu" />.
       <br /><br />
-      I currently work at <Link className='text-sm' text="Draper" to="https://www.draper.com" /> as a Simulation
-      Software Engineer, volunteer at <Link className='text-sm' text="TransitMatters" to="www.transitmatters.org" />,
-      and contribute to open-source projects such as <Link className='text-sm' text="nlohmann/json" to="https://github.com/nlohmann/json" />.
+      I currently work at <Link text="Draper" to="https://www.draper.com" /> as a Simulation
+      Software Engineer, volunteer at <Link text="TransitMatters" to="www.transitmatters.org" />,
+      and contribute to open-source projects such as <Link text="nlohmann/json" to="https://github.com/nlohmann/json" />.
       <br /><br />
       I work with C++, TypeScript, and Python most often, but I have experience with a range of other languages.
       Technologies I use, among others, include Docker, Linux, Gitlab CI, CMake, and Node.

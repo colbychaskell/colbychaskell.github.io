@@ -1,4 +1,4 @@
-const Link = (props: { className: string, text: string, to: string }) => {
+const Link = (props: { className?: string, text: string, to: string }) => {
   return (
     <>
       <a href={props.to}

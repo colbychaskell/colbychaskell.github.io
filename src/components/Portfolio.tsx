@@ -5,6 +5,10 @@ import { textVariant } from "../utils/motion";
 import NTT from '../assets/NTTBackground.png';
 import TrainIcon from '../assets/TrainIcon.png';
 import CesiumAstro from '../assets/Cesium.png';
+import Stars from '../assets/Stars.webp';
+import Draper from '../assets/Draper.png';
+import IPhone from "./mockup/iPhone";
+import BetterBrewsScreen from "../assets/BetterBrewsScreen.png"
 
 // interface ProjectCardProps {
 //   index: number
@@ -94,6 +98,29 @@ const CesiumAstroCard = () => {
   );
 }
 
+const DraperCard = () => {
+  return (
+    <PortfolioCard desc="SIMULATION SOFTWARE ENGINEER" team="DRAPER" link="#">
+      <div className="bg-black ps-4 pe-5">
+        <img src={Draper} className="hover:cursor-pointer" />
+      </div>
+    </PortfolioCard>
+  )
+}
+
+const BetterBrewsCard = () => {
+  return (
+    <PortfolioCard desc="APP DEVELOPER" team="BETTER BREWS" link="#">
+      <div className="bg-[#CFB299] py-10">
+        <IPhone>
+          <div className='pt-3 pb-8 bg-[#CFB299]'>
+            <img src={BetterBrewsScreen} />
+          </div>
+        </IPhone>
+      </div>
+    </PortfolioCard>
+  )
+}
 const Portfolio = () => {
   return (
     <section className='col-start-1 col-end-13'>
@@ -103,11 +130,13 @@ const Portfolio = () => {
       <div className='grid gap-3 grid-cols-3 grid-gap'>
         <div className='flex flex-col gap-4'>
           <NewTrainTrackerCard />
+        </div>
+        <div className='flex flex-col gap-4'>
+          <DraperCard />
+        </div>
+        <div className='flex flex-col gap-4'>
           <CesiumAstroCard />
-        </div>
-        <div className='flex flex-col gap-4'>
-        </div>
-        <div className='flex flex-col gap-4'>
+          <BetterBrewsCard />
         </div>
       </div>
     </section>
