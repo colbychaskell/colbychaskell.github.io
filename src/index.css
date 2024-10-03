@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "JetBrains Mono", sans-serif;
+  font-family: 'JetBrains Mono', sans-serif;
   font-size: 14px;
   scroll-behavior: smooth;
   color-scheme: dark;
@@ -44,7 +44,7 @@
   min-width: 2000px;
   width: 100%;
   display: grid;
-  grid-template-areas: "stack";
+  grid-template-areas: 'stack';
   justify-content: start;
 }
 

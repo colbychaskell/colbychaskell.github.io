@@ -1,9 +1,9 @@
-import { Navbar, Hero, Portfolio, Footer } from "./components";
-import { useState } from 'react';
+import { Navbar, Hero, Portfolio, Footer } from './components'
+import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [showNav, _] = useState(true);
+  const [showNav, _] = useState(true)
 
   return (
     <>

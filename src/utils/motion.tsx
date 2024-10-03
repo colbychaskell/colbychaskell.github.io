@@ -15,19 +15,34 @@ export const textVariant = (delay: number) => {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: 'spring',
         duration: 1,
         delay: delay,
       },
     },
-  };
-};
+  }
+}
 
-export const fadeIn = (direction: Direction, type: string, delay: number, duration: number) => {
+export const fadeIn = (
+  direction: Direction,
+  type: string,
+  delay: number,
+  duration: number
+) => {
   return {
     hidden: {
-      x: direction === Direction.Left ? 100 : direction === Direction.Right ? -100 : 0,
-      y: direction === Direction.Up ? 100 : direction === Direction.Down ? -100 : 0,
+      x:
+        direction === Direction.Left
+          ? 100
+          : direction === Direction.Right
+            ? -100
+            : 0,
+      y:
+        direction === Direction.Up
+          ? 100
+          : direction === Direction.Down
+            ? -100
+            : 0,
       opacity: 0,
     },
     show: {
@@ -38,11 +53,11 @@ export const fadeIn = (direction: Direction, type: string, delay: number, durati
         type: type,
         delay: delay,
         duration: duration,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
-  };
-};
+  }
+}
 
 export const zoomIn = (delay: number, duration: number) => {
   return {
@@ -54,20 +69,35 @@ export const zoomIn = (delay: number, duration: number) => {
       scale: 1,
       opacity: 1,
       transition: {
-        type: "tween",
+        type: 'tween',
         delay: delay,
         duration: duration,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
-  };
-};
+  }
+}
 
-export const slideIn = (direction: Direction, type: any, delay: number, duration: number) => {
+export const slideIn = (
+  direction: Direction,
+  type: any,
+  delay: number,
+  duration: number
+) => {
   return {
     hidden: {
-      x: direction === Direction.Left ? "-100%" : direction === Direction.Right ? "100%" : 0,
-      y: direction === Direction.Up ? "100%" : direction === Direction.Down ? "100%" : 0,
+      x:
+        direction === Direction.Left
+          ? '-100%'
+          : direction === Direction.Right
+            ? '100%'
+            : 0,
+      y:
+        direction === Direction.Up
+          ? '100%'
+          : direction === Direction.Down
+            ? '100%'
+            : 0,
     },
     show: {
       x: 0,
@@ -76,11 +106,11 @@ export const slideIn = (direction: Direction, type: any, delay: number, duration
         type: type,
         delay: delay,
         duration: duration,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
-  };
-};
+  }
+}
 
 export const staggerContainer = (staggerChildren: any, delayChildren: any) => {
   return {
@@ -91,5 +121,5 @@ export const staggerContainer = (staggerChildren: any, delayChildren: any) => {
         delayChildren: delayChildren || 0,
       },
     },
-  };
-};
+  }
+}

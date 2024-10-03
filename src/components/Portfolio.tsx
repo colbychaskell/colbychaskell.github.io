@@ -1,13 +1,13 @@
-import { motion } from "framer-motion";
-import React from "react";
+import { motion } from 'framer-motion'
+import React from 'react'
 
-import { textVariant } from "../utils/motion";
-import NTT from '../assets/NTTBackground.png';
-import TrainIcon from '../assets/TrainIcon.png';
-import CesiumAstro from '../assets/Cesium.png';
-import Draper from '../assets/Draper.png';
-import IPhone from "./mockup/iPhone";
-import BetterBrewsScreen from "../assets/BetterBrewsScreen.png"
+import { textVariant } from '../utils/motion'
+import NTT from '../assets/NTTBackground.png'
+import TrainIcon from '../assets/TrainIcon.png'
+import CesiumAstro from '../assets/Cesium.png'
+import Draper from '../assets/Draper.png'
+import IPhone from './mockup/iPhone'
+import BetterBrewsScreen from '../assets/BetterBrewsScreen.png'
 
 // interface ProjectCardProps {
 //   index: number
@@ -59,34 +59,55 @@ import BetterBrewsScreen from "../assets/BetterBrewsScreen.png"
 //   );
 // };
 
-const PortfolioCard = (props: { link: string, desc: string, team: string, children: React.ReactNode, }) => {
+const PortfolioCard = (props: {
+  link: string
+  desc: string
+  team: string
+  children: React.ReactNode
+}) => {
   return (
-    <div className='flex flex-col text-left'>
-      <a href={props.link} className='hover:opacity-40'>
+    <div className="flex flex-col text-left">
+      <a href={props.link} className="hover:opacity-40">
         {props.children}
       </a>
-      <p className='mt-2 font-light text-sm'>
-        <a className='hover:cursor-pointer' href={props.link}>{props.desc}</a>
+      <p className="mt-2 font-light text-sm">
+        <a className="hover:cursor-pointer" href={props.link}>
+          {props.desc}
+        </a>
       </p>
-      <p className='font-light caption text-sm opacity-40'>
-        <a className='hover:cursor-pointer' href={props.link}>{props.team}</a>
+      <p className="font-light caption text-sm opacity-40">
+        <a className="hover:cursor-pointer" href={props.link}>
+          {props.team}
+        </a>
       </p>
     </div>
-  );
+  )
 }
 
 const NewTrainTrackerCard = () => {
   return (
     <PortfolioCard desc="NEW TRAIN TRACKER" team="TRANSIT MATTERS" link="#">
       <div className="grid overflow-clip">
-        <img src={NTT} className="col-start-1 row-start-1 hover:cursor-pointer" />
-        <div className='relative w-8 mx-auto h-full col-start-1 row-start-1'>
-          <motion.img animate={{ top: ['-45px', '17%', '62.2%', '130%'] }} transition={{ duration: 10, ease: 'easeInOut', repeat: Infinity, repeatDelay: 2 }}
-            src={TrainIcon} className="absolute w-full col-start-1 row-start-1 bg-none hover:cursor-pointer hover:opacity-80" />
+        <img
+          src={NTT}
+          className="col-start-1 row-start-1 hover:cursor-pointer"
+        />
+        <div className="relative w-8 mx-auto h-full col-start-1 row-start-1">
+          <motion.img
+            animate={{ top: ['-45px', '17%', '62.2%', '130%'] }}
+            transition={{
+              duration: 10,
+              ease: 'easeInOut',
+              repeat: Infinity,
+              repeatDelay: 2,
+            }}
+            src={TrainIcon}
+            className="absolute w-full col-start-1 row-start-1 bg-none hover:cursor-pointer hover:opacity-80"
+          />
         </div>
       </div>
     </PortfolioCard>
-  );
+  )
 }
 
 const CesiumAstroCard = () => {
@@ -94,7 +115,7 @@ const CesiumAstroCard = () => {
     <PortfolioCard desc="SOFTWARE ENGINEER INTERN" team="CESIUM ASTRO" link="#">
       <img src={CesiumAstro} className="hover:cursor-pointer" />
     </PortfolioCard>
-  );
+  )
 }
 
 const DraperCard = () => {
@@ -112,7 +133,7 @@ const BetterBrewsCard = () => {
     <PortfolioCard desc="APP DEVELOPER" team="BETTER BREWS" link="#">
       <div className="bg-[#CFB299] py-10">
         <IPhone>
-          <div className='pt-3 pb-8 bg-[#CFB299]'>
+          <div className="pt-3 pb-8 bg-[#CFB299]">
             <img src={BetterBrewsScreen} />
           </div>
         </IPhone>
@@ -120,26 +141,27 @@ const BetterBrewsCard = () => {
     </PortfolioCard>
   )
 }
+
 const Portfolio = () => {
   return (
-    <section className='col-start-1 col-end-13'>
-      <motion.div className='md:text-left' variants={textVariant(0)}>
-        <p className='opacity-40 my-4'>PORTFOLIO.md</p>
+    <section className="col-start-1 col-end-13">
+      <motion.div className="md:text-left" variants={textVariant(0)}>
+        <p className="opacity-40 my-4">PORTFOLIO.md</p>
       </motion.div>
-      <div className='grid gap-3 grid-cols-3 grid-gap'>
-        <div className='flex flex-col gap-4'>
+      <div className="grid gap-3 grid-cols-3 grid-gap">
+        <div className="flex flex-col gap-4">
           <NewTrainTrackerCard />
         </div>
-        <div className='flex flex-col gap-4'>
+        <div className="flex flex-col gap-4">
           <DraperCard />
         </div>
-        <div className='flex flex-col gap-4'>
+        <div className="flex flex-col gap-4">
           <CesiumAstroCard />
           <BetterBrewsCard />
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Portfolio;
+export default Portfolio
