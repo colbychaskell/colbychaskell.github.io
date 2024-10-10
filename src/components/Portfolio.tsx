@@ -86,7 +86,7 @@ const PortfolioCard = (props: {
 
 const NewTrainTrackerCard = () => {
   return (
-    <PortfolioCard desc="NEW TRAIN TRACKER" team="TRANSIT MATTERS" link="#">
+    <PortfolioCard desc="NEW TRAIN TRACKER" team="TRANSIT MATTERS" link="https://traintracker.transitmatters.org">
       <div className="grid overflow-clip">
         <img
           src={NTT}
@@ -112,7 +112,7 @@ const NewTrainTrackerCard = () => {
 
 const CesiumAstroCard = () => {
   return (
-    <PortfolioCard desc="SOFTWARE ENGINEER INTERN" team="CESIUM ASTRO" link="#">
+    <PortfolioCard desc="SOFTWARE ENGINEER INTERN" team="CESIUM ASTRO" link="https://www.cesiumastro.com">
       <img src={CesiumAstro} className="hover:cursor-pointer" />
     </PortfolioCard>
   )
@@ -120,7 +120,7 @@ const CesiumAstroCard = () => {
 
 const DraperCard = () => {
   return (
-    <PortfolioCard desc="SIMULATION SOFTWARE ENGINEER" team="DRAPER" link="#">
+    <PortfolioCard desc="SIMULATION SOFTWARE ENGINEER" team="DRAPER" link="https://www.draper.com">
       <div className="bg-black ps-4 pe-5">
         <img src={Draper} className="hover:cursor-pointer" />
       </div>
@@ -130,7 +130,7 @@ const DraperCard = () => {
 
 const BetterBrewsCard = () => {
   return (
-    <PortfolioCard desc="APP DEVELOPER" team="BETTER BREWS" link="#">
+    <PortfolioCard desc="APP DEVELOPER" team="BETTER BREWS" link="https://github.com/BetterBrews/BetterBrews-IOS">
       <div className="bg-[#CFB299] py-10">
         <IPhone>
           <div className="pt-3 pb-8 bg-[#CFB299]">
@@ -145,7 +145,7 @@ const BetterBrewsCard = () => {
 const Portfolio = () => {
   return (
     <section className="">
-      <motion.div className="md:text-left" variants={textVariant(0)}>
+      <motion.div className="text-left" variants={textVariant(0)}>
         <p className="opacity-40 my-4">PORTFOLIO.md</p>
       </motion.div>
       <div className="grid grid-gap gap-3 grid-cols-1 md:grid-cols-3 grid-gap">
