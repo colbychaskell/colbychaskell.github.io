@@ -47,12 +47,10 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="my-8 col-start-1 md:col-end-13 grid grid-cols-12 gap-6 grid-layout text-left overflow-x-clip"
+      className="w-full flex flex-col md:flex-row md:justify-between text-left overflow-x-clip"
     >
       <Readme />
-      <div className="col-start-7 col-end-13">
-        <Contact />
-      </div>
+      <Contact />
     </section>
   )
 }

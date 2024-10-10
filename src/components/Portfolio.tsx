@@ -144,11 +144,11 @@ const BetterBrewsCard = () => {
 
 const Portfolio = () => {
   return (
-    <section className="col-start-1 col-end-13">
+    <section className="">
       <motion.div className="md:text-left" variants={textVariant(0)}>
         <p className="opacity-40 my-4">PORTFOLIO.md</p>
       </motion.div>
-      <div className="grid gap-3 grid-cols-3 grid-gap">
+      <div className="grid grid-gap gap-3 grid-cols-1 md:grid-cols-3 grid-gap">
         <div className="flex flex-col gap-4">
           <NewTrainTrackerCard />
         </div>
