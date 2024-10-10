@@ -2,7 +2,7 @@ import Link from './Link'
 
 const Contact = () => {
   return (
-    <div id="contact" className="section w-full">
+    <div id="contact" className="section">
       <p className="opacity-40 mb-3">CONTACT.md</p>
       <p className="max-w-prose">
         If you would like to see more of my work, I actively contribute to
