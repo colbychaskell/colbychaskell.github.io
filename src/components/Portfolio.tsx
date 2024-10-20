@@ -144,7 +144,7 @@ const BetterBrewsCard = () => {
 
 const Portfolio = () => {
   return (
-    <section className="">
+    <section id="portfolio" className="">
       <motion.div className="text-left" variants={textVariant(0)}>
         <p className="opacity-40 my-4">PORTFOLIO.md</p>
       </motion.div>
